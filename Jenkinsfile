@@ -38,8 +38,5 @@ pipeline {
         }      
    
    }	
-       // post {
-               
-                    archiveArtifacts artifacts: 'target/*.jar'
-    		}//
+       
 }
