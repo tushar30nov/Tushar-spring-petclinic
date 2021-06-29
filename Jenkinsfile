@@ -9,21 +9,22 @@ pipeline {
     		steps{
     			git 'https://github.com/tushar30nov/Tushar-spring-petclinic.git'
     		}
-    		echo "Checkout done"
+    		
     	}
         stage('Build') {   
         
             steps {
              sh "mvn clean package"
-               
+             echo "Build completed"
             }
-            echo "Build completed"
+            
         }
         stage('Test') {
             steps {
                 sh "mvn clean test"
+                echo "Test completed"
             }
-            echo "Test completed"
+            
         }
         
         stage('Deploy') {   
@@ -31,9 +32,9 @@ pipeline {
             steps {
             sh "mvn clean deploy"
             archiveArtifacts artifacts: '**/target/*.war'
-               
-            }
             echo "Deployment completed"
+            }
+            
             
             post {
                
