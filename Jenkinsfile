@@ -35,11 +35,11 @@ pipeline {
             echo "Deployment completed"
             }
             
-        }
-           post {
+        }      
+   
+   }	
+        post {
                
                     archiveArtifacts artifacts: 'target/*.jar'
     		}
-        }    
-    }	
 }
