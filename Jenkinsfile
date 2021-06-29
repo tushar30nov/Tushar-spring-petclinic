@@ -7,7 +7,7 @@ pipeline {
     	stage('Checkout')
     	{
     		steps{
-    			git 'https://github.com/tushar30nov/Timetracker2.git'
+    			git 'https://github.com/tushar30nov/Tushar-spring-petclinic.git'
     		}
     		echo "Checkout done"
     	}
