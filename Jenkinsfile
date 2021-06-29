@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy') {   
         
             steps {
-            sh "mvn clean deploy -U -Dmaven.test.skip=true"
+            sh "mvn clean deploy -Dmaven.test.skip=true"
             
             echo "Deployment completed"
             }
