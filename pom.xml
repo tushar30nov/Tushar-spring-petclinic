@@ -34,6 +34,7 @@
 
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
+
 	<dependency>
 			<groupId>org.sonarsource.scanner.maven</groupId>
 			<artifactId>sonar-maven-plugin</artifactId>
@@ -128,7 +129,6 @@
   </dependencies>
 
   <build>
-         
     <plugins>
       <plugin>
         <groupId>io.spring.javaformat</groupId>
