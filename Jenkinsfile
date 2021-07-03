@@ -1,7 +1,7 @@
 pipeline {
 
 	agent any
-        ${webapps} = "Users/tusharhadke/Desktop/DevOps/Apache tomcat/apache-tomcat-9.0.46/webapps"
+        ${webapps} = "
 	
     stages {
     
@@ -16,6 +16,7 @@ pipeline {
         
             steps {
              sh "mvn clean package"
+             archiveArtifacts artifacts: '**/target/*.jar',
              echo "Build completed"
             }
             
@@ -31,7 +32,7 @@ pipeline {
         stage('Deploy on Tomcat') {   
         
             steps {
-                    sh "copy target\\spring-petclinic-2.4.5.jar\"${webapps}\\spring-petclinic-2.4.5.jar\""
+                    sh "cp target/spring-petclinic-2.4.5.jar Users/tusharhadke/Desktop/DevOps/Apache tomcat/apache-tomcat-9.0.46/webapps/spring-petclinic-2.4.5.jar"
             
             echo "Deployment completed"
             }
