@@ -1,7 +1,7 @@
 pipeline {
 
 	agent any
-        def webapps = "Users/tusharhadke/Desktop/DevOps/Apache tomcat/apache-tomcat-9.0.46/webapps"
+        ${webapps} = "Users/tusharhadke/Desktop/DevOps/Apache tomcat/apache-tomcat-9.0.46/webapps"
 	
     stages {
     
