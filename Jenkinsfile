@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy on Tomcat') {   
         
             steps {
-                    sh "cp /Users/tusharhadke/Desktop/DevOps/Jenkins Pipeline assignment/spring-petclinic/target Users/tusharhadke/Desktop/DevOps/Apache tomcat/apache-tomcat-9.0.46/webapps/spring-petclinic-2.4.5.jar"
+                    sh "cp spring-petclinic-2.4.5.jar /Users/tusharhadke/Desktop/DevOps/Apache tomcat/apache-tomcat-9.0.46/webapps/spring-petclinic-2.4.5.jar"
             
             echo "Deployment completed"
             }
