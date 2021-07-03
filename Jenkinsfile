@@ -15,7 +15,7 @@ pipeline {
         
             steps {
              sh "mvn clean package"
-             archiveArtifacts artifacts: '**/target/*.jar',
+            
              echo "Build completed"
             }
             
