@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy on Tomcat') {   
         
             steps {
-                    sh "copy target\\*.war\"${Webapp}\\*.war\""
+                    sh "copy target\\*.war\"${webapps}\\*.war\""
             
             echo "Deployment completed"
             }
