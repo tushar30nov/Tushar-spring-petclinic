@@ -27,10 +27,10 @@ pipeline {
             
         }
         
-        stage('Deploy') {   
+        stage('Deploy on Tomcat') {   
         
             steps {
-            sh "mvn clean deploy"
+                    sh "copy target\\*.war\"${tomcatWeb}\\*.war\""
             
             echo "Deployment completed"
             }
