@@ -36,7 +36,7 @@ pipeline {
         
             steps {
                    
-                  sh "java -jar target/spring-petclinic-2.4.5.jar --server.port=8082"
+                  sh "java -jar target/spring-petclinic-2.4.5.jar --server.port=8083"
             
             echo "Deployment completed"
             }
