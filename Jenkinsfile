@@ -32,7 +32,7 @@ pipeline {
         
             steps {
                    
-                  sh "cp -R ~/target/spring-petclinic-2.4.5.jar /Users/tusharhadke/Desktop/DevOps/Apache tomcat/apache-tomcat-9.0.46/webapps"
+                  sh "java -jar target/spring-petclinic-2.4.5.jar --server.port=8082"
             
             echo "Deployment completed"
             }
