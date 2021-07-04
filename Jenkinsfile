@@ -16,6 +16,8 @@ pipeline {
                 sh "mvn clean test"
                 echo "Test completed"
             }
+                     
+             }
             
         stage('Build') {   
         
@@ -28,8 +30,7 @@ pipeline {
             }
            
         }
-       
-        }
+      
         
         stage('Deploy on Tomcat') {   
         
